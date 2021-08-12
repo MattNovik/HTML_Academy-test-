@@ -105,10 +105,12 @@ exports.clean = clean;
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/js/script.js", gulp.series("script"));
+  //gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
+ // gulp.watch("source/js/script.js", gulp.series("script"));
   gulp.watch("source/*.html").on("change", sync.reload);
 }
+
+exports.watcher = watcher;
 
 const build = gulp.series(
   clean,
