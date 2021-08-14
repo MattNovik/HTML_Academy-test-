@@ -9,7 +9,15 @@
 	color: #2C2E3F;
 	margin:0;
 
-
+	&:after {
+		content:"";
+		position: absolute;
+		bottom:-20px;
+		left:0;
+		width:175px;
+		height:3px;
+		background: $button__accent;
+	}
 }
 .prices-info__text {
 	font-size: 16px;
