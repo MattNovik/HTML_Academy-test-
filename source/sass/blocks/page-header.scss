@@ -5,6 +5,12 @@
 	justify-content:space-between;
 	align-items:center;
 	margin:36px auto 32px auto;
+
+	@media (max-width:$tablet-width) {
+		width:747px;
+		height:50px;
+		margin:0 auto;
+	}
 }
 
 .page-header__logo {
@@ -17,6 +23,9 @@
 	display: flex;
 	align-items:center;
 	justify-content:space-between;
+	@media (max-width:$tablet-width) {
+		display: none;
+	}
 }
 .page-header__tel {
 	position: relative;

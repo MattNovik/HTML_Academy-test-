@@ -5,4 +5,18 @@
 	grid-template-columns:1fr 1fr;
 	margin:0 auto;
 	color:#fff;
+
+	@media (max-width:$tablet-width) {
+		width:747px;
+		display: flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+	}
+}
+.wrapper-adv-info__plug {
+
+	@media (max-width:$tablet-width) {
+		display: none;
+	}
 }
