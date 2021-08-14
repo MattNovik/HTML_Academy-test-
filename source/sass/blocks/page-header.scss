@@ -1,6 +1,6 @@
 .page-header {
 	width:1170px;
-	height:32px;
+	height:28px;
 	display: flex;
 	justify-content:space-between;
 	align-items:center;
@@ -13,7 +13,7 @@
 }
 .page-header__nav-tel {
 	width:496px;
-	height:32px;
+	height:28px;
 	display: flex;
 	align-items:center;
 	justify-content:space-between;
@@ -26,10 +26,10 @@
 	&:before {
 		content: "";
 		top:0;
-		left:-30px;
+		left:-36px;
 		position: absolute;
 		width:30px;
-		height:30px;
+		height:28px;
 		background: url('../../img/mobTelephone.svg') no-repeat top left;
 	}
 }
