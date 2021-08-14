@@ -10,4 +10,9 @@
 	@media (max-width:$tablet-width) {
 		margin:40px 0 0 0;
 	}
+
+	@media (max-width:$mobile-width-only) {
+		flex-direction:column;
+		flex-wrap:no-wrap;
+	}
 }

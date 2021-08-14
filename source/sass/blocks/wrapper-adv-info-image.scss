@@ -8,4 +8,8 @@
 	@media (max-width:$tablet-width) {
 		height:344px;
 	}
+
+	@media (max-width:$mobile-width-only) {
+		height:235px;
+	}
 }

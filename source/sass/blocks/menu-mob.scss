@@ -1,0 +1,17 @@
+.menu-mob {
+	display: none;
+
+	@media (max-width:$tablet-width) {
+/* 		display: flex;
+		height:100%;
+		width:72px;
+		background: $button__accent; */
+	}
+}
+
+.menu-mob__list {
+
+	@media (max-width:$tablet-width) {
+		display: none;
+	}
+}
