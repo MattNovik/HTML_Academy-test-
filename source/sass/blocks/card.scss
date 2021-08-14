@@ -4,18 +4,39 @@
 	display: flex;
 	justify-content:center;
 	align-items:flex-end;
+
+	@media (max-width:$tablet-width) {
+		width:288px;
+		height:425px;
+	}
 }
 .card:first-child {
 	margin:0 auto 0 0;
+
+	@media (max-width:$tablet-width) {
+		margin:0 40px 0 0;
+	}
 }
 .card:nth-child(3) {
 	margin:0 0 0 auto;
+
+	@media (max-width:$tablet-width) {
+		margin:40px 40px 0 0;
+	}
 }
 .card:nth-child(4) {
 	margin:100px 120px 0 0;
+
+	@media (max-width:$tablet-width) {
+		margin:40px 0 0 0;
+	}
 }
 .card:nth-child(5) {
 	margin:100px 0 0 0; 
+
+	@media (max-width:$tablet-width) {
+		margin:40px 0 0 0;
+	}
 }
 .card_greece-img {
 	background-image: url("../../img/greeceTabDesk.png");

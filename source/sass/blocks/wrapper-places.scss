@@ -2,6 +2,14 @@
 	width:1170px;
 	height:auto;
 	margin:200px auto 0;
+
+	@media (max-width:$tablet-width) {
+		width:747px;
+		display: flex;
+		flex-direction:column;
+		align-items:center;
+		margin:80px auto 0;
+	}
 }
 .wrapper-places__name {
 	position: relative;
@@ -21,6 +29,17 @@
 		height:4px;
 		background:$button__accent;
 	}
+
+	@media (max-width:$tablet-width) {
+		width:301px;
+		text-align:center;
+		font-size: 30px;
+		line-height: 150%;
+
+		&:after {
+			content:none;
+		}
+	}
 }
 .wrapper-places__text {
 	width:358px;
@@ -29,4 +48,12 @@
 	letter-spacing: -0.466667px;
 	color: rgba(44, 46, 63, 0.7);
 	margin: 68px 0 0 0;
+
+	@media (max-width:$tablet-width) {
+		width:343px;
+		font-size: 16px;
+		line-height: 28px;
+		text-align:center;
+		margin:20px 0 0 0;
+	}
 }

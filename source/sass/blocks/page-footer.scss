@@ -6,6 +6,13 @@
 	margin:160px auto 74px;
 
 	@media (max-width:$tablet-width) {
-		width:747px;
+		width:726px;
+		display: grid;
+		grid-template-areas:
+			"countries contacts"
+			"site site";
+		grid-template-columns:396px 330px;
+		grid-template-rows:208px 154px;
+		margin:80px auto 0;
 	}
 }

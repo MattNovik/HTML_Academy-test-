@@ -3,4 +3,18 @@
 	width:1170px;
 	height:455px;
 	margin:140px auto 0;
+
+	@media (max-width:$tablet-width) {
+		margin:110px auto 0;
+	}
+}
+
+.wrapper-additional__image-wrapper {
+
+	@media (max-width:$tablet-width) {
+		width:100%;
+		img {
+			width:100%;
+		}
+	}
 }

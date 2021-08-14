@@ -1,6 +1,14 @@
 .tab-info {
 	width:425px;
 	margin:6px 45px 0 0;
+
+	@media (max-width:$tablet-width) {
+		display: flex;
+		flex-direction:column;
+		align-items:center;
+		width:726px;
+		margin:0;
+	}
 }
 .tab-info__name {
 	position: relative;
@@ -19,6 +27,15 @@
 		height:3px;
 		background:$button__accent;
 	}
+
+	@media (max-width:$tablet-width) {
+		font-size: 30px;
+		line-height: 150%;
+
+		&:after {
+			content:none;
+		}
+	}
 }
 .tab-info__text {
 	width:370px;
@@ -27,6 +44,12 @@
 	letter-spacing: -0.466667px;
 	color: rgba(44, 46, 63, 0.7);
 	margin:53px 0 0 0;
+
+	@media (max-width:$tablet-width) {
+		width:726px;
+		text-align: center;
+		margin:20px 0 0 0;
+	}
 }
 .tab-info__button {
 	width:250px;
@@ -43,4 +66,11 @@
 	color:#fff;
 	border:none;
 	margin:50px 0 0 0;
+
+	@media (max-width:$tablet-width) {
+		height:50px;
+		font-size: 10px;
+		line-height: 12px;
+		margin:20px 0 0 0;
+	}
 }

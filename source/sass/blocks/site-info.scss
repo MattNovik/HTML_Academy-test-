@@ -3,6 +3,12 @@
 	flex-direction: column;
 	padding:0 0 0 55px;
 	box-sizing:border-box;
+
+	@media (max-width:$tablet-width) {
+		padding:0;
+		grid-area: site;
+		border-top: 1px solid #D7D9DF;
+	}
 }
 .site-info__name {
 	font-weight: 600;
@@ -10,10 +16,19 @@
 	line-height: 32px;
 	color: #141517;
 	margin:0;
+
+	@media (max-width:$tablet-width) {
+		text-align:center;
+		margin:30px 0 0 0;
+	}
 }
 .site-info__text {
 	margin:20px 0 0 0;
 	font-size: 14px;
 	line-height: 170%;
 	color: rgba(20, 21, 23, 0.5);
+
+	@media (max-width:$tablet-width) {
+		text-align:center;
+	}
 }

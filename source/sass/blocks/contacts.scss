@@ -5,6 +5,11 @@
 	padding:0 0 0 65px;
 	box-sizing:border-box;
 	border-right: solid 1px #D7D9DF;
+
+	@media (max-width:$tablet-width) {
+		border-right: none;
+		padding:0 0 0 50px;
+	}
 }
 .contacts__name {
 	font-weight: 600;

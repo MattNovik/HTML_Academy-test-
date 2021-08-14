@@ -2,4 +2,10 @@
 	width:1170px;
 	height:auto;
 	margin:124px auto 0;
+
+	@media (max-width:$tablet-width) {
+		width:100%;
+		overflow:hidden;
+		padding:0 0 40px 0;
+	}
 }

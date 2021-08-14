@@ -12,6 +12,12 @@
 	border-radius: 5px;
 	box-sizing:border-box;
 	padding:50px;
+
+	@media (max-width:$tablet-width) {
+		height:311px;
+		top:calc(50% - 155px);
+		left:calc(50% - 328px);
+	}
 }
 .additional-info__name {
 	font-weight: 600;
@@ -88,4 +94,10 @@
 	line-height: 15px;
 	letter-spacing: 2px;
 	text-transform: uppercase;
+
+	@media (max-width:$tablet-width) {
+		width:250px;
+		font-size:10px;
+		margin:20px 0 0 0;
+	}
 }

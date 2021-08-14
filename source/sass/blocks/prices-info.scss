@@ -1,6 +1,15 @@
 .prices-info {
 	width:316px;
 	height:460px;
+
+	@media (max-width:$tablet-width) {
+		width:747px;
+		height:auto;
+		display: flex;
+		flex-direction:column;
+		justify-content:flex-start;
+		align-items:center;
+	}
 }
 .prices-info__name {
 	position: relative;
@@ -19,6 +28,15 @@
 		height:3px;
 		background: $button__accent;
 	}
+
+	@media (max-width:$tablet-width) {
+		font-size: 30px;
+		line-height: 150%;
+
+		&:after {
+			content:none;
+		}
+	}
 }
 .prices-info__text {
 	width:306px;
@@ -26,4 +44,10 @@
 	line-height: 27px;
 	color: rgba(44, 46, 63, 0.7);
 	margin:50px 0 0 0;
+
+	@media (max-width:$tablet-width) {
+		width:726px;
+		text-align:center;
+		margin:20px 0 0 0;
+	}
 }

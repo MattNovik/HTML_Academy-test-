@@ -7,6 +7,11 @@
 	background: #fff;
 	box-sizing:border-box;
 	padding:30px;
+
+	@media (max-width:$tablet-width) {
+		top:80px;
+		left:calc(50% - 191px);
+	}
 }
 .tab-review__name {
 	position: relative;

@@ -16,4 +16,8 @@
 	.active {
 		color:$button__accent;
 	}
+
+	@media (max-width:$tablet-width) {
+		margin:0 auto;
+	}
 }
