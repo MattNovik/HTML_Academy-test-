@@ -1,12 +1,21 @@
 .wrapper-places {
 	width:1170px;
 	height:auto;
-	border:solid 1px red;
 	margin:200px auto 0;
 }
 .wrapper-places__name {
 	width:358px;
+	font-weight: 600;
+	font-size: 55px;
+	line-height: 80px;
+	letter-spacing: -1.245px;
+	margin:0;
 }
 .wrapper-places__text {
 	width:358px;
+	font-size: 16px;
+	line-height: 28px;
+	letter-spacing: -0.466667px;
+	color: rgba(44, 46, 63, 0.7);
+	margin: 64px 0 0 0;
 }

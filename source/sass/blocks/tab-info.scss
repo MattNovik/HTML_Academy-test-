@@ -2,6 +2,34 @@
 	width:425px;
 	margin:0 45px 0 0;
 }
+.tab-info__name {
+	font-weight: 600;
+	font-size: 55px;
+	line-height: 90px;
+	letter-spacing: -1.245px;
+	margin:0;
+}
 .tab-info__text {
-	width:308px;
+	width:370px;
+	font-size: 16px;
+	line-height: 28px;
+	letter-spacing: -0.466667px;
+	color: rgba(44, 46, 63, 0.7);
+	margin:53px 0 0 0;
+}
+.tab-info__button {
+	width:250px;
+	height:75px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	font-weight:700;
+	font-size: 12px;
+	line-height: 15px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	background:$button__accent;
+	color:#fff;
+	border:none;
+	margin:50px 0 0 0;
 }

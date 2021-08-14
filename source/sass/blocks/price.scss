@@ -1,9 +1,77 @@
 .price {
 	width:370px;
+	height:672px;
+	display: flex;
+	flex-direction:column;
+	justify-content:space-between;
 	padding:40px 30px 30px 30px;
 	box-sizing:border-box;
-	border:solid 1px red;
+	border: 1px solid rgba(44, 46, 63, 0.3);
+	box-shadow: 0px 0px 0px 4px transparent;
+	border-radius: 6px;
+	background:#fff;
+
+	&:hover {
+		border: 1px solid $button__accent;
+		box-shadow: 0px 0px 0px 4px $button__accent;
+		.price__name,
+		.price__count {
+			color:$button__accent;
+		}
+	}
 }
 .price_first {
 	margin: 0 30px 0 0;
+}
+.price__name {
+	margin:0;
+	font-weight:700;
+	font-size: 25px;
+	line-height: 34px;
+	color: rgba(20, 21, 23, 0.7);
+}
+.price__count {
+	margin:0;
+	font-weight:700;
+	font-size: 25px;
+	line-height: 34px;
+	color: rgba(20, 21, 23, 0.7);
+}
+.price__info {
+	margin:40px 0 0 0;
+	font-size: 16px;
+	line-height: 24px;
+	color: #2C2E3F;
+}
+.price__points {
+	height:316px;
+	font-size: 16px;
+	line-height: 32px;
+	color: #2C2E3F;
+	padding:0;
+	margin:59px 0 0 0;
+	list-style-type: none;
+}
+.price__points li {
+	padding:0 0 15px 30px;
+}
+.price__points li:last-child {
+	padding:0 0 0 30px;
+}
+.price__buy {
+	width:310px;
+	height:75px;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	color:#fff;
+	font-weight:700;
+	font-size: 12px;
+	line-height: 15px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	background:$button__accent;
+	margin:30px 0 0 0;
+	padding:0;
+	border:none;
 }

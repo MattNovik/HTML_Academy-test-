@@ -6,3 +6,24 @@
 	box-sizing:border-box;
 	border-right: solid 1px #D7D9DF;
 }
+.contacts__name {
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 32px;
+	color: #141517;
+	margin:0;
+}
+.contacts__mail {
+	margin:24px 0 0 46px;
+	font-size: 14px;
+	line-height: 17px;
+	text-decoration-line: underline;
+	color: $button__accent;
+}
+.contacts__tel {
+	margin:23px 0 0 46px;
+	font-size: 16px;
+	line-height: 32px;
+	text-decoration-line: underline;
+	color: $button__accent;
+}

@@ -4,3 +4,16 @@
 	padding:0 0 0 55px;
 	box-sizing:border-box;
 }
+.site-info__name {
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 32px;
+	color: #141517;
+	margin:0;
+}
+.site-info__text {
+	margin:20px 0 0 0;
+	font-size: 14px;
+	line-height: 170%;
+	color: rgba(20, 21, 23, 0.5);
+}

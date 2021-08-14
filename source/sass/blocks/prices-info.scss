@@ -1,3 +1,16 @@
 .prices-info {
 	width:306px;
 }
+.prices-info__name {
+	font-weight: 600;
+	font-size: 55px;
+	line-height: 90px;
+	color: #2C2E3F;
+	margin:0;
+}
+.prices-info__text {
+	font-size: 16px;
+	line-height: 170%;
+	color: rgba(44, 46, 63, 0.7);
+	margin:53px 0 0 0;
+}
