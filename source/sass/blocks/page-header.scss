@@ -19,5 +19,17 @@
 	justify-content:space-between;
 }
 .page-header__tel {
+	position: relative;
 	font-size:18px;
+	text-decoration-line: underline;
+	
+	&:before {
+		content: "";
+		top:0;
+		left:-30px;
+		position: absolute;
+		width:30px;
+		height:30px;
+		background: url('../../img/mobTelephone.svg') no-repeat top left;
+	}
 }

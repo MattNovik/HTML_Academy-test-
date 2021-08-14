@@ -9,12 +9,23 @@
 	padding:30px;
 }
 .tab-review__name {
+	position: relative;
 	font-weight: 500;
 	font-size: 30px;
 	line-height: 37px;
 	letter-spacing: -0.691667px;
 	color: #2C2E3F;
 	margin:0;
+
+	&:after {
+		content: "";
+		position: absolute;
+		bottom:-10px;
+		left:0;
+		width:68px;
+		height:1px;
+		background: $button__accent;
+	}
 }
 .tab-review__text {
 	font-size: 14px;
@@ -24,6 +35,7 @@
 	margin:32px 0 0 0;
 }
 .tab-review__author {
+	position: relative;
 	width:204px;
 	height:38px;
 	box-sizing:border-box;
@@ -33,4 +45,17 @@
 	font-size: 16px;
 	line-height: 38px;
 	letter-spacing: -0.466667px;
+
+	&:before {
+		content:"";
+		position: absolute;
+		top:0;
+		left:0;
+		width:38px;
+		height:38px;
+		border-radius:50%;
+		background-image:url("../../img/greeceReviewPhoto.png");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
 }

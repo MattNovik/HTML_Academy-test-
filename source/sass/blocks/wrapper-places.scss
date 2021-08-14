@@ -4,12 +4,23 @@
 	margin:200px auto 0;
 }
 .wrapper-places__name {
+	position: relative;
 	width:358px;
 	font-weight: 600;
 	font-size: 55px;
 	line-height: 80px;
 	letter-spacing: -1.245px;
 	margin:0;
+
+	&:after {
+		content:"";
+		position: absolute;
+		bottom:-30px;
+		left:0;
+		width:229px;
+		height:4px;
+		background:$button__accent;
+	}
 }
 .wrapper-places__text {
 	width:358px;
