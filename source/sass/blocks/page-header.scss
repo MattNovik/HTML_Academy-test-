@@ -1,0 +1,21 @@
+.page-header {
+	width:1170px;
+	height:32px;
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+	margin:36px auto 32px auto;
+	border:solid 1px black;
+}
+
+.page-header__logo {
+	width:57px;
+	height:22px;
+}
+.page-header__nav-tel {
+	width:496px;
+	height:32px;
+	display: flex;
+	align-items:center;
+	justify-content:space-between;
+}
