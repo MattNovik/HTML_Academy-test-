@@ -10,6 +10,10 @@
 		justify-content:flex-start;
 		align-items:center;
 	}
+
+	@media (max-width:$mobile-width-only) {
+		width:100%;
+	}
 }
 .prices-info__name {
 	position: relative;
@@ -37,6 +41,10 @@
 			content:none;
 		}
 	}
+
+	@media (max-width:$mobile-width-only) {
+		font-size:24px;
+	}
 }
 .prices-info__text {
 	width:306px;
@@ -49,5 +57,9 @@
 		width:726px;
 		text-align:center;
 		margin:20px 0 0 0;
+	}
+
+	@media (max-width:$mobile-width-only) {
+		width:288px;
 	}
 }

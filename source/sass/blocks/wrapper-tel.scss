@@ -11,6 +11,10 @@
 		max-width:2000px;
 		align-items:center;
 	}
+
+	@media (max-width:$mobile-width-only) {
+		display: none;
+	}
 }
 .wrapper-tel__text {
 	font-weight: 500;
@@ -43,7 +47,7 @@
 		color:$button__accent;
 		font-size:18px;
 		margin:10px 0 0 0;
-		
+		text-decoration: underline;
 		svg {
 			display: none;
 		}

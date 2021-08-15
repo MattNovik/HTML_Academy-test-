@@ -7,8 +7,16 @@
 	border-right: solid 1px #D7D9DF;
 
 	@media (max-width:$tablet-width) {
+		min-width:0;
 		border-right: none;
 		padding:0 0 0 50px;
+	}
+
+	@media (max-width:$mobile-width-only) {
+		width:288px;
+		margin:30px 0 0 0;
+		padding:0 0 29px 0;
+		text-align: center;
 	}
 }
 .contacts__name {
@@ -31,6 +39,14 @@
 		top:0;
 		left:-46px;
 	}
+
+	@media (max-width:$mobile-width-only) {
+		margin:25px 0 0 46px;
+
+		svg {
+			left:-35px;
+		}
+	}
 }
 .contacts__tel {
 	position: relative;
@@ -46,6 +62,14 @@
 		left:-40px;
 		path {
 			stroke:#D7D9DF;
+		}
+	}
+
+	@media (max-width:$mobile-width-only) {
+		margin:25px 0 0 46px;
+
+		svg {
+			left:-5px;
 		}
 	}
 }

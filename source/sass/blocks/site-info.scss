@@ -9,6 +9,11 @@
 		grid-area: site;
 		border-top: 1px solid #D7D9DF;
 	}
+
+	@media (max-width:$mobile-width-only) {
+		width:288px;
+		margin:0 0 20px 0;
+	}
 }
 .site-info__name {
 	font-weight: 600;
@@ -20,6 +25,10 @@
 	@media (max-width:$tablet-width) {
 		text-align:center;
 		margin:30px 0 0 0;
+	}
+
+	@media (max-width:$mobile-width-only) {
+		width:288px;
 	}
 }
 .site-info__text {

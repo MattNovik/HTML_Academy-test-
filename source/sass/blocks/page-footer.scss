@@ -15,4 +15,13 @@
 		grid-template-rows:208px 154px;
 		margin:80px auto 0;
 	}
+
+	@media (max-width:$mobile-width-only) {
+		display: flex;
+		width:100%;
+		flex-direction:column;
+		align-items:center;
+		justify-content:center;
+		margin:60px auto 0;
+	}
 }

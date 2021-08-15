@@ -4,6 +4,14 @@
 	display: flex;
 	flex-direction:column;
 	border-right:solid 1px #D7D9DF;
+
+	@media (max-width:$mobile-width-only) {
+		min-width:0;
+		width:288px;
+		border-right:none;
+		border-bottom:solid 1px #D7D9DF;
+		height:auto;
+	}
 }
 .new-arrivals__name {
 	font-weight: 600;
@@ -11,4 +19,8 @@
 	line-height: 32px;
 	color: #141517;
 	margin:0;
+
+	@media (max-width:$mobile-width-only) {
+		text-align: center;
+	}
 }
