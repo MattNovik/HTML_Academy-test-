@@ -1,0 +1,31 @@
+.wrapper-modal {
+	position: fixed;
+	top:calc(50% - 222px);
+	left:calc(50% - 364px);
+	width:728px;
+	height:444px;
+	display: flex;
+	justify-content:space-between;
+	background: #FBF8F8;
+	z-index:300;
+
+	&.wrapper-modal_closed {
+		display: none;
+	}
+
+	@media (max-width:$mobile-width-only) {
+		align-items:center;
+		height:auto;
+		width:auto;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+	}
+}
+.wrapper-modal__image {
+
+	@media (max-width:$mobile-width-only) {
+		display: none;
+	}
+}

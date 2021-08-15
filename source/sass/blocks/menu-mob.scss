@@ -1,17 +1,54 @@
 .menu-mob {
-	display: none;
+
+	&.menu-mob_closed {
+			display: none;
+	}
 
 	@media (max-width:$tablet-width) {
-/* 		display: flex;
+		position: fixed;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		display: flex;
 		height:100%;
-		width:72px;
-		background: $button__accent; */
+		background: #fff;
+		z-index: 200; 
 	}
 }
 
 .menu-mob__list {
 
 	@media (max-width:$tablet-width) {
-		display: none;
+		width:100%;
+		height:auto;
+		margin:134px 0 0 0;
+		padding:0;
+		list-style-type: none;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 140%;
+		color: #48494D;
+	}
+}
+.menu-mob__list li {
+
+	@media (max-width:$tablet-width) {
+		position: relative;
+		height:60px;
+		margin:0 0 30px 0;
+		box-sizing:border-box;
+		padding:17px 0 17px 16px;
+		background: #FBF8F8;
+
+		&:after {
+			content: "";
+			position: absolute;
+			top:23px;
+			right:25px;
+			width:8px;
+			height:12px;
+			background: url("../../img/shape.svg") no-repeat;
+		}
 	}
 }

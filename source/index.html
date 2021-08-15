@@ -10,8 +10,8 @@
 			<a href="#" class="page-header__logo">
 				<img src="img/logo.svg" alt="logo">
 			</a>
-			<buttom class="page-header__menu-toggle"></buttom>
-			<nav class="menu-mob">
+			<span class="page-header__menu-toggle"></span>
+			<nav class="menu-mob menu-mob_closed">
 				<ul class="menu-mob__list">
 					<li>О путешествии</li>
 					<li>Цены</li>
@@ -28,6 +28,22 @@
 			</div>
 		</header>
 		<main class="page-main">
+			<div class="wrapper-page-modal-hover wrapper-page-modal-hover_closed"></div>
+			<div class="wrapper-modal wrapper-modal_closed">
+				<div class="wrapper-modal__image">
+					<img src="img/popup.png" alt="popup" width="338" height="444">
+				</div>
+				<div class="wrapper-modal-form">
+					<span class="wrapper-modal-form__close"></span>
+					<p class="wrapper-modal-form__name">Купить тур</p>
+					<form action="post" class="wrapper-modal-form__form">
+						<input type="tel" id="tel" class="telephone" placeholder="Введите 10 цифр номера " required>
+						<label for="tel"><span>*</span> +7</label>
+						<input type="email" class="email" placeholder="E-mail">
+						<button class="wrapper-modal-form__send" type="submit">отправить</button>
+					</form>					
+				</div>
+			</div>
 			<div class="wrapper-adv-info-image">
 				<div class="wrapper-adv-info">
 					<div class="wrapper-adv-info__plug"></div>
@@ -74,7 +90,7 @@
 						<div class="tab tab-info">
 							<h3 class="tab-info__name">Греция</h3>
 							<p class="tab-info__text">На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры. </p>
-							<button class="tab-info__button">купить тур сейчас</button>
+							<button class="tab-info__button open-popup">купить тур сейчас</button>
 						</div>
 						<div class="tab tab-image">
 							<img src="img/greeceTabDesk.jpg" alt="greece" width="430" height="596">
@@ -89,7 +105,7 @@
 						<div class="tab tab-info">
 							<h3 class="tab-info__name">Греция</h3>
 							<p class="tab-info__text">На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры. </p>
-							<button class="tab-info__button">купить тур сейчас</button>
+							<button class="tab-info__button open-popup">купить тур сейчас</button>
 						</div>
 						<div class="tab tab-image">
 							<div class="tab-review">
@@ -103,7 +119,7 @@
 						<div class="tab tab-info">
 							<h3 class="tab-info__name">Греция</h3>
 							<p class="tab-info__text">На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры. </p>
-							<button class="tab-info__button">купить тур сейчас</button>
+							<button class="tab-info__button open-popup">купить тур сейчас</button>
 						</div>
 						<div class="tab tab-image">
 							<div class="tab-review">
@@ -117,7 +133,7 @@
 						<div class="tab tab-info">
 							<h3 class="tab-info__name">Греция</h3>
 							<p class="tab-info__text">На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры. </p>
-							<button class="tab-info__button">купить тур сейчас</button>
+							<button class="tab-info__button open-popup">купить тур сейчас</button>
 						</div>
 						<div class="tab tab-image">
 							<div class="tab-review">
@@ -131,7 +147,7 @@
 						<div class="tab tab-info">
 							<h3 class="tab-info__name">Греция</h3>
 							<p class="tab-info__text">На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры. </p>
-							<button class="tab-info__button">купить тур сейчас</button>
+							<button class="tab-info__button open-popup">купить тур сейчас</button>
 						</div>
 						<div class="tab tab-image">
 							<div class="tab-review">
@@ -169,7 +185,7 @@
 							<li>Завтраки, ужины в отелях и ланчи на природе</li>
 							<li>Экскурсии по удивительно красивым местам Европы</li>
 						</ul>
-						<button class="price__buy">купить тур сейчас</button>
+						<button class="price__buy open-popup">купить тур сейчас</button>
 					</div>
 					<div class="price price_second">
 						<div class="wrapper-price-name-count">
@@ -184,7 +200,7 @@
 							<li>Только завтраки в отелях</li>
 							<li>Экскурсии по удивительно красивым местам Европы</li>
 						</ul>
-						<button class="price__buy">купить тур сейчас</button>
+						<button class="price__buy open-popup">купить тур сейчас</button>
 					</div>
 				</div>
 			</div>
@@ -196,8 +212,8 @@
 					<p class="additional-info__name">У Вас остались вопросы?</p>
 					<p class="additional-info__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
 					<form action="post" class="additional-info__form">
-						<input type="tel" name="tel" class="telephone" placeholder="Введите 10 цифр номера ">
-						<!-- <label for="tel">*+7</label> -->
+						<input type="tel" id="tel" class="telephone" placeholder="Введите 10 цифр номера " required>
+						<label for="tel"><span>*</span> +7</label>
 						<input type="email" class="email" placeholder="E-mail">
 						<button class="additional-info__send" type="submit">отправить</button>
 					</form>
@@ -249,5 +265,6 @@
 				<p class="site-info__text">Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры очень сближают компанию, помогают поддерживать корпоративный дух, а также являются оличным времяпрепровождением</p>
 			</div>
 		</footer>
+		<script src="js/script.min.js"></script>
 	</body>
 </html>
