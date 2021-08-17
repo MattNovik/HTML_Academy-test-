@@ -82,11 +82,12 @@
 	&.error {
 		border:solid 1px #FE7865;
 	}
-
-	&:invalid {
-		border:solid 1px #FE7865;
+	
+	&.email {
+		&:invalid {
+			border:solid 1px #FE7865;
+		}
 	}
-
 
 
 	@media (max-width:$mobile-width-only) {

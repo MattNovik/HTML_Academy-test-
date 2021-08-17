@@ -68,11 +68,14 @@ const isEscEvent = (evt) => {
 };
 
 const onPopupEscKeydown = (evt) => {
-  if (isEscEvent(evt)) {
-    evt.preventDefault();
-    popup.classList.add("wrapper-modal_closed");
+	if (isEscEvent(evt)) {
+		evt.preventDefault();
+		popup.classList.add("wrapper-modal_closed");
 		pageHover.classList.add("wrapper-page-modal-hover_closed");
-  }
+		if (!formSendSuccess.classList.contains("wrapper-modal-success_closed")) {
+			formSendSuccess.classList.add("wrapper-modal-success_closed");
+		}
+	}
 };
 
 const createTab = function(arr) {
@@ -152,14 +155,31 @@ for (let i = 0; i < countriesElements.length; i++) {
 	});
 };
 
+const formSendSuccess = document.querySelector(".wrapper-modal-success");
+
+const formSendSucessClose = document.querySelector(".wrapper-modal-success__close");
+
+formSendSucessClose.addEventListener("click", () => {
+	if (!formSendSuccess.classList.contains("wrapper-modal-success_closed")) {
+		formSendSuccess.classList.add("wrapper-modal-success_closed");
+		pageHover.classList.add("wrapper-page-modal-hover_closed");
+		document.removeEventListener('keydown', onPopupEscKeydown);
+	}
+});
+
 additionalFromSend.addEventListener("submit", (evt) => {
 	evt.preventDefault();
-
+	console.log('hi');
+	formSendSuccess.classList.remove("wrapper-modal-success_closed");
+	pageHover.classList.remove("wrapper-page-modal-hover_closed");
+	document.addEventListener('keydown', onPopupEscKeydown);
 });
 
 popupFormSend.addEventListener("submit", (evt) => {
 	evt.preventDefault();
-
+	formSendSuccess.classList.remove("wrapper-modal-success_closed");
+	pageHover.classList.remove("wrapper-page-modal-hover_closed");
+	document.addEventListener('keydown', onPopupEscKeydown);
 });
 
 for (let i = 0; i < openPopup.length; i++) {
@@ -175,6 +195,7 @@ for (let i = 0; i < openPopup.length; i++) {
 pageHover.addEventListener("click", () => {
 	popup.classList.add("wrapper-modal_closed");
 	pageHover.classList.add("wrapper-page-modal-hover_closed");
+	formSendSuccess.classList.add("wrapper-modal-success_closed");
 	document.removeEventListener('keydown', onPopupEscKeydown);
 });
 
