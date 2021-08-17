@@ -33,7 +33,7 @@ const styles = () => {
 exports.styles = styles;
 
 const html = () => {
-  return gulp.src("source/**/*.html")
+  return gulp.src("source/index.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 }
@@ -108,7 +108,7 @@ exports.clean = clean;
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/js/script.js", gulp.series("script"));
-  gulp.watch("source/*.html", gulp.series("html")).on("change", sync.reload);
+  gulp.watch("source/index.html", gulp.series("html")).on("change", sync.reload);
 }
 
 exports.watcher = watcher;

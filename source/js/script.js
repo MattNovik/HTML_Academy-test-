@@ -4,11 +4,12 @@ openPopup = document.querySelectorAll(".open-popup");
 popup = document.querySelector(".wrapper-modal");
 closePopup = document.querySelector(".wrapper-modal-form__close");
 pageHover = document.querySelector(".wrapper-page-modal-hover");
-popupFormSend = document.querySelector(".wrapper-modal-form__send");
-additionalFromSend = document.querySelector(".additional-info__send");
+popupFormSend = document.querySelector(".wrapper-modal-form__form");
+additionalFromSend = document.querySelector(".additional-info__form");
 countriesCards = document.querySelector(".countries-cards");
 countriesSlides = document.querySelectorAll(".countries-slide__elem");
 countriesElements = document.querySelectorAll(".card");
+
 const COUNTRIES = {
 	greece: {
 		countryName: "greece",
@@ -62,6 +63,18 @@ const COUNTRIES = {
 	}
 };
 
+const isEscEvent = (evt) => {
+  return evt.key === 'Escape' || evt.key === 'Esc';
+};
+
+const onPopupEscKeydown = (evt) => {
+  if (isEscEvent(evt)) {
+    evt.preventDefault();
+    popup.classList.add("wrapper-modal_closed");
+		pageHover.classList.add("wrapper-page-modal-hover_closed");
+  }
+};
+
 const createTab = function(arr) {
 	const tabTemplate = document.querySelector("#tabs").content;
 	const tab = tabTemplate.cloneNode(true);
@@ -80,6 +93,7 @@ const createTab = function(arr) {
 	tab.querySelector(".tab-review__author").textContent = arr.reviewAuthor;
 	tab.querySelector(".open-popup").addEventListener("click", () => {
 		if (popup.classList.contains("wrapper-modal_closed")) {
+			document.addEventListener('keydown', onPopupEscKeydown);
 			popup.classList.remove("wrapper-modal_closed");
 			pageHover.classList.remove("wrapper-page-modal-hover_closed");
 		}
@@ -90,10 +104,7 @@ const createTab = function(arr) {
 
 for (let arr in COUNTRIES) {
 	countriesCards.appendChild(createTab(COUNTRIES[arr]));
-
 };
-
-
 
 for (let i = 0; i < countriesSlides.length; i++) {
 	countriesSlides[i].addEventListener("click", () => {
@@ -141,35 +152,37 @@ for (let i = 0; i < countriesElements.length; i++) {
 	});
 };
 
-additionalFromSend.addEventListener("click", (evt) => {
-	evt.preventDefault();
-});
-
-popupFormSend.addEventListener("click", (evt) => {
+additionalFromSend.addEventListener("submit", (evt) => {
 	evt.preventDefault();
 
 });
 
-const addEventOnButton = () => { 
-	for (let i = 0; i < openPopup.length; i++) {
-		openPopup[i].addEventListener("click", () => {
-			if (popup.classList.contains("wrapper-modal_closed")) {
-				popup.classList.remove("wrapper-modal_closed");
-				pageHover.classList.remove("wrapper-page-modal-hover_closed");
-			}
-		})
-	};
-};
+popupFormSend.addEventListener("submit", (evt) => {
+	evt.preventDefault();
+
+});
+
+for (let i = 0; i < openPopup.length; i++) {
+	openPopup[i].addEventListener("click", () => {
+		if (popup.classList.contains("wrapper-modal_closed")) {
+			popup.classList.remove("wrapper-modal_closed");
+			pageHover.classList.remove("wrapper-page-modal-hover_closed");
+			document.addEventListener('keydown', onPopupEscKeydown);
+		}
+	})
+}
 
 pageHover.addEventListener("click", () => {
 	popup.classList.add("wrapper-modal_closed");
 	pageHover.classList.add("wrapper-page-modal-hover_closed");
+	document.removeEventListener('keydown', onPopupEscKeydown);
 });
 
 closePopup.addEventListener("click", () => {
 	if (!popup.classList.contains("wrapper-modal_closed")) {
 		popup.classList.add("wrapper-modal_closed");
 		pageHover.classList.add("wrapper-page-modal-hover_closed");
+		document.removeEventListener('keydown', onPopupEscKeydown);
 	}
 });
 
@@ -183,17 +196,20 @@ menuToggle.addEventListener("click", () => {
 	}
 });
 
-addEventOnButton();
 
-const telephoneForm = document.querySelector(".additional-info__telephone");
+telephoneForm = document.querySelectorAll(".telephone");
 
-telephoneForm.addEventListener('input', () => {
-  if (telephoneForm.validity.tooShort || telephoneForm.validity.tooLong) {
-  	telephoneForm.setCustomValidity('Телефон должен состоять из 9 симоволов (если вы из РФ)');
-  } else if (telephoneForm.validity.valueMissing) {
-  	telephoneForm.setCustomValidity('Обязательное поле');
-  } else {
-  	telephoneForm.setCustomValidity('');
-  }
-});
+for (let i = 0; i < telephoneForm.length; i++) {
+	telephoneForm[i].addEventListener("input", () => {
+
+	  if (telephoneForm[i].validity.tooShort || telephoneForm[i].validity.tooLong) {
+	  	telephoneForm[i].classList.add("error")
+	  } else if (telephoneForm[i].validity.valueMissing) {
+	  	telephoneForm[i].classList.add("error");
+	  } else {
+	  	telephoneForm[i].classList.remove("error");
+	  }
+	  telephoneForm[i].value = telephoneForm[i].value.replace(/[^0-9]/g, '');
+	});
+}
 

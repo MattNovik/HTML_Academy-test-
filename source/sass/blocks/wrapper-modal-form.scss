@@ -37,6 +37,15 @@
 	line-height: 17px;
 	color: #141517;
 	font-family: "Montserrat", "Arial", sans-serif;
+	outline: none;
+
+	&.error {
+		border:solid 1px #FE7865;
+	}
+
+	&:invalid {
+		border:solid 1px #FE7865;
+	}
 
 }
 .wrapper-modal-form__form input::placeholder {

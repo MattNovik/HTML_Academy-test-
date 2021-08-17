@@ -41,8 +41,8 @@
 				<div class="wrapper-modal-form">
 					<span class="wrapper-modal-form__close"></span>
 					<p class="wrapper-modal-form__name">Купить тур</p>
-					<form action="post" class="wrapper-modal-form__form">
-						<input type="tel" id="tel" class="telephone" placeholder="Введите 10 цифр номера " required>
+					<form method="post" class="wrapper-modal-form__form" enctype="multipart/form-data" autocomplete="off">
+						<input type="tel" id="tel" class="telephone" placeholder="Введите 10 цифр номера" required minlength="10" maxlength="10" >
 						<label for="tel"><span>*</span> +7</label>
 						<input type="email" class="email" placeholder="E-mail">
 						<button class="wrapper-modal-form__send" type="submit">отправить</button>
@@ -161,9 +161,9 @@
 					<p class="additional-info__name">У Вас остались вопросы?</p>
 					<p class="additional-info__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
 					<form method="post" class="additional-info__form" enctype="multipart/form-data" autocomplete="off">
-						<input type="tel" id="tel" class="additional-info__telephone" placeholder="Введите 10 цифр номера" required minlength="9" maxlength="9">
+						<input type="tel" id="tel" class="telephone" placeholder="Введите 10 цифр номера" required  minlength="10" maxlength="10">
 						<label for="tel"><span>*</span> +7</label>
-						<input type="email" class="additional-info__email" placeholder="E-mail">
+						<input type="email" class="email" placeholder="E-mail">
 						<button class="additional-info__send" type="submit">отправить</button>
 					</form>
 				</div>
