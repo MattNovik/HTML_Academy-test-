@@ -120,10 +120,12 @@ for (let i = 0; i < countriesElements.length; i++) {
 	countriesElements[i].addEventListener("click", () => {
 		let checkClass = countriesElements[i].className.split(" ");
 		let cardsElements = document.querySelectorAll(".cards");
-
 		for (let k = 0; k < countriesSlides.length; k++) {
 			if (countriesSlides[k].classList.contains("active")) {
 				countriesSlides[k].classList.remove("active");
+			}
+			if ( countriesElements[i].classList.contains(countriesSlides[k].id)) {
+				countriesSlides[k].classList.add("active");
 			}
 		}
 		cardsElements.forEach((arr) => {
@@ -145,6 +147,7 @@ additionalFromSend.addEventListener("click", (evt) => {
 
 popupFormSend.addEventListener("click", (evt) => {
 	evt.preventDefault();
+
 });
 
 const addEventOnButton = () => { 
@@ -181,4 +184,16 @@ menuToggle.addEventListener("click", () => {
 });
 
 addEventOnButton();
+
+const telephoneForm = document.querySelector(".additional-info__telephone");
+
+telephoneForm.addEventListener('input', () => {
+  if (telephoneForm.validity.tooShort || telephoneForm.validity.tooLong) {
+  	telephoneForm.setCustomValidity('Телефон должен состоять из 9 симоволов (если вы из РФ)');
+  } else if (telephoneForm.validity.valueMissing) {
+  	telephoneForm.setCustomValidity('Обязательное поле');
+  } else {
+  	telephoneForm.setCustomValidity('');
+  }
+});
 
