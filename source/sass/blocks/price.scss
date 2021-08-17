@@ -14,6 +14,8 @@
 	&:hover {
 		border: 1px solid $button__accent;
 		box-shadow: 0px 0px 0px 4px $button__accent;
+		cursor: pointer;
+
 		.price__name,
 		.price__count {
 			color:$button__accent;
@@ -168,6 +170,10 @@
 	margin:30px 0 0 0;
 	padding:0;
 	border:none;
+
+	&:hover {
+		background: $button__hover;
+	}
 
 	@media (max-width:$tablet-width) {
 		width:calc(100% + 2px);

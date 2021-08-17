@@ -9,53 +9,13 @@ additionalFromSend = document.querySelector(".additional-info__send");
 countriesCards = document.querySelector(".countries-cards");
 countriesSlides = document.querySelectorAll(".countries-slide__elem");
 countriesElements = document.querySelectorAll(".card");
-
-additionalFromSend.addEventListener("click", (evt) => {
-	evt.preventDefault();
-});
-
-popupFormSend.addEventListener("click", (evt) => {
-	evt.preventDefault();
-});
-
-for (let i = 0; i < openPopup.length; i++) {
-	openPopup[i].addEventListener("click", () => {
-		if (popup.classList.contains("wrapper-modal_closed")) {
-			popup.classList.remove("wrapper-modal_closed");
-			pageHover.classList.remove("wrapper-page-modal-hover_closed");
-		}
-	})
-};
-
-pageHover.addEventListener("click", () => {
-	popup.classList.add("wrapper-modal_closed");
-	pageHover.classList.add("wrapper-page-modal-hover_closed");
-});
-
-closePopup.addEventListener("click", () => {
-	if (!popup.classList.contains("wrapper-modal_closed")) {
-		popup.classList.add("wrapper-modal_closed");
-		pageHover.classList.add("wrapper-page-modal-hover_closed");
-	}
-});
-
-menuToggle.addEventListener("click", () => {
-	if (menuMob.classList.contains("menu-mob_closed")) {
-		menuMob.classList.remove("menu-mob_closed");
-		menuToggle.classList.add("page-header__menu-toggle_opened");
-	} else {
-		menuMob.classList.add("menu-mob_closed");
-		menuToggle.classList.remove("page-header__menu-toggle_opened");
-	}
-});
-
-const countries = {
+const COUNTRIES = {
 	greece: {
 		countryName: "greece",
 		name: "Греция",
 		text: "На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.",
 		button: "купить тур сейча",
-		image: "../img/greeceTabDesk.jpg",
+		image: "../img/greeceRealTabDesk.png",
 		reviewName: "Отзывы",
 		reviewText: "Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света!",
 		reviewAuthor: "Влада Голицина",
@@ -107,6 +67,7 @@ const createTab = function(arr) {
 	const tab = tabTemplate.cloneNode(true);
 
 	tab.querySelector(".cards").classList.add("cards_" + arr.countryName);
+	tab.querySelector(".cards").id = "cards_" + arr.countryName;
 	if (!tab.querySelector(".cards_greece")) {
 		tab.querySelector(".cards").classList.add("cards_close");
 	}
@@ -117,12 +78,18 @@ const createTab = function(arr) {
 	tab.querySelector(".tab-review__name").textContent = arr.reviewName;
 	tab.querySelector(".tab-review__text").textContent = arr.reviewText;
 	tab.querySelector(".tab-review__author").textContent = arr.reviewAuthor;
+	tab.querySelector(".open-popup").addEventListener("click", () => {
+		if (popup.classList.contains("wrapper-modal_closed")) {
+			popup.classList.remove("wrapper-modal_closed");
+			pageHover.classList.remove("wrapper-page-modal-hover_closed");
+		}
+	});
 
 	return tab;
 };
 
-for (let arr in countries) {
-	countriesCards.appendChild(createTab(countries[arr]));
+for (let arr in COUNTRIES) {
+	countriesCards.appendChild(createTab(COUNTRIES[arr]));
 
 };
 
@@ -171,3 +138,47 @@ for (let i = 0; i < countriesElements.length; i++) {
 		})
 	});
 };
+
+additionalFromSend.addEventListener("click", (evt) => {
+	evt.preventDefault();
+});
+
+popupFormSend.addEventListener("click", (evt) => {
+	evt.preventDefault();
+});
+
+const addEventOnButton = () => { 
+	for (let i = 0; i < openPopup.length; i++) {
+		openPopup[i].addEventListener("click", () => {
+			if (popup.classList.contains("wrapper-modal_closed")) {
+				popup.classList.remove("wrapper-modal_closed");
+				pageHover.classList.remove("wrapper-page-modal-hover_closed");
+			}
+		})
+	};
+};
+
+pageHover.addEventListener("click", () => {
+	popup.classList.add("wrapper-modal_closed");
+	pageHover.classList.add("wrapper-page-modal-hover_closed");
+});
+
+closePopup.addEventListener("click", () => {
+	if (!popup.classList.contains("wrapper-modal_closed")) {
+		popup.classList.add("wrapper-modal_closed");
+		pageHover.classList.add("wrapper-page-modal-hover_closed");
+	}
+});
+
+menuToggle.addEventListener("click", () => {
+	if (menuMob.classList.contains("menu-mob_closed")) {
+		menuMob.classList.remove("menu-mob_closed");
+		menuToggle.classList.add("page-header__menu-toggle_opened");
+	} else {
+		menuMob.classList.add("menu-mob_closed");
+		menuToggle.classList.remove("page-header__menu-toggle_opened");
+	}
+});
+
+addEventOnButton();
+

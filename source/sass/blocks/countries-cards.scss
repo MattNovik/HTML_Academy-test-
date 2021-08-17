@@ -1,9 +1,11 @@
 .countries-cards {
+	position: relative;
 	width:1170px;
 	height:auto;
 	display: flex;
 	justify-content:flex-start;
 	margin:76px 0 0 0;
+	background: transparent;
 
 	@media (max-width:$tablet-width) {
 		width:100%;

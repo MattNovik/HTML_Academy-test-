@@ -79,6 +79,10 @@
 	border:none;
 	margin:50px 0 0 0;
 
+	&:hover {
+		background: $button__hover;
+	}
+
 	@media (max-width:$tablet-width) {
 		height:50px;
 		font-size: 10px;

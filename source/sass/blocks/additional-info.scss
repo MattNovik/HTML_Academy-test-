@@ -139,6 +139,10 @@
 	letter-spacing: 2px;
 	text-transform: uppercase;
 
+	&:hover {
+		background: $button__hover;
+	}
+
 	@media (max-width:$tablet-width) {
 		width:250px;
 		font-size:10px;

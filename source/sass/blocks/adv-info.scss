@@ -81,6 +81,7 @@
 
 	&:hover {
 		cursor: pointer;
+		background: $button__hover;
 	}
 	&:after {
 		content:"";

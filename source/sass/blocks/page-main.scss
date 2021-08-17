@@ -1,8 +1,26 @@
 .page-main {
+	position: relative;
 	width:100%;
 	height:100%;
+	overflow: hidden;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top:2610px;
+		left:calc(50% - 720px);
+		width:1440px;
+		height:1100px;
+		background-image: url("../../img/undercoverDesk.png");
+		background-repeat: no-repeat;
+		z-index: -1;
+	}
 
 	@media (max-width:$tablet-width) {
+
+		&:before {
+			content: none;
+		}
 	}
 
 	@media (max-width:$mobile-width-only) {

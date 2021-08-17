@@ -2,6 +2,7 @@
 	width:100%;
 	display: flex;
 	justify-content:flex-start;
+	background: transparent;
 
 	@media (max-width:$tablet-width) {
 		flex-direction:column;

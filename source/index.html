@@ -13,18 +13,23 @@
 			<span class="page-header__menu-toggle"></span>
 			<nav class="menu-mob menu-mob_closed">
 				<ul class="menu-mob__list">
-					<li>О путешествии</li>
-					<li>Цены</li>
+					<li><a href="#places">О путешествии</a></li>
+					<li><a href="#prices">Цены</a></li>
 				</ul>
 			</nav>			
 			<div class="page-header__nav-tel">
 				<nav class="menu">
 					<ul class="menu__list">
-						<li>О путешествии</li>
-						<li>Цены</li>
+						<li><a href="#places">О путешествии</a></li>
+						<li><a href="#prices">Цены</a></li>
 					</ul>
 				</nav>
-				<a href="tel:+749978468446" class="page-header__tel">+7 (499) -784-684-46</a>				
+				<a href="tel:+749978468446" class="page-header__tel">
+					<svg width="17" height="24" viewBox="0 0 17 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.3961 6.62432C1.31155 5.42623 1.57729 4.24606 2.2809 3.29684C2.8909 2.43632 3.68511 1.96636 4.64239 1.69172C5.44868 1.4525 5.97715 1.74561 6.20968 2.64204C6.54186 3.98224 7.01598 5.3225 7.18811 6.73361C7.24247 7.35485 6.84084 8.23322 6.40598 8.6856C5.31583 9.75888 5.54232 10.5399 6.36976 12.1643C6.62644 12.6881 7.03412 13.5934 7.82834 14.7919C8.65577 15.9992 9.09364 16.6472 10.1566 16.0975C11.3374 15.5035 12.198 15.8855 13.0889 16.8444C13.6928 17.5369 14.3572 18.1318 14.9612 18.8243C15.8339 19.8542 15.7946 20.5641 15.1121 21.2915C13.8831 22.6309 11.8538 23.0736 10.3439 22.1766C9.51039 21.6881 8.67994 21.0487 8.0186 20.303C5.10447 16.9825 3.00266 13.1212 1.73735 8.76321C1.53502 8.02654 1.4414 7.28104 1.3961 6.62432Z" stroke="#141517" stroke-width="2" stroke-miterlimit="10"/>
+							</svg>
+							+7 (499) -784-684-46
+				</a>				
 			</div>
 		</header>
 		<main class="page-main">
@@ -50,34 +55,49 @@
 					<div class="adv-info">
 						<h1 class="adv-info__name">Путешествие по Европе</h1>
 						<p class="adv-info__text">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
-						<button class="adv-info__link">смотреть тур</button>
+						<a href="#to-tabs" class="adv-info__link">смотреть тур</a>
 					</div>
 				</div>
 			</div>
-			<div class="wrapper-places">
+			<div class="wrapper-places" id="places">
 				<h2 class="wrapper-places__name">Места посещения</h2>
 				<p class="wrapper-places__text">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
 				<div class="wrapper-cards">
-					<div class="card card_greece greece">
+					<a href="#cards_greece" class="card card_greece greece">
+						<div class="card__hover card__hover_closed">
+							<button>смотреть подробнее</button>
+						</div>
 						<p class="card__name">Греция</p>
-					</div>
-					<div class="card card_albanium albanium">
+					</a>
+					<a href="#cards_albanium" class="card card_albanium albanium">
+						<div class="card__hover card__hover_closed">
+							<button>смотреть подробнее</button>
+						</div>
 						<p class="card__name">Албания</p>
-					</div>
-					<div class="card card_maked maked">
+					</a>
+					<a href="#cards_maked" class="card card_maked maked">
+						<div class="card__hover card__hover_closed">
+							<button>смотреть подробнее</button>
+						</div>
 						<p class="card__name">Македония</p>
-					</div>
-					<div class="card card_cherno cherno">
+					</a>
+					<a href="#cards_cherno"class="card card_cherno cherno">
+						<div class="card__hover card__hover_closed">
+							<button>смотреть подробнее</button>
+						</div>
 						<p class="card__name">Черногория</p>
-					</div>
-					<div class="card card_croatia croatia">
+					</a>
+					<a href="#cards_croatia" class="card card_croatia croatia">
+						<div class="card__hover card__hover_closed">
+							<button>смотреть подробнее</button>
+						</div>
 						<p class="card__name">Хорватия</p>
-					</div>
+					</a>
 				</div>
 			</div>
 			<div class="wrapper-tabs">
 				<div class="wrapper-tabs__countries">
-					<ul class="countries-slide">
+					<ul class="countries-slide" id="to-tabs">
 						<li class="countries-slide__elem active" id="greece">Греция</li>
 						<li class="countries-slide__elem" id="albanium">Албания</li>
 						<li class="countries-slide__elem" id="maked">Македония</li>
@@ -159,7 +179,7 @@
 					</div> -->
 				</div>
 			</div>
-			<div class="wrapper-prices">
+			<div class="wrapper-prices" id="prices">
 				<div class="prices-info">
 					<h2 class="prices-info__name">Цены</h2>
 					<p class="prices-info__text">Специально для Вас  мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%! </p>

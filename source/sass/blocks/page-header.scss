@@ -47,16 +47,23 @@
 	position: relative;
 	font-size:18px;
 	text-decoration-line: underline;
-	
-	&:before {
-		content: "";
-		top:0;
-		left:-36px;
-		position: absolute;
-		width:30px;
-		height:28px;
-		background: url('../../img/mobTelephone.svg') no-repeat top left;
+
+	&:hover {
+		color:$button__accent;
+
+		svg {
+			path {
+				stroke:$button__accent;
+			}
+		}
 	}
+
+	svg {
+		position: absolute;
+		left:-35px;
+		top:-3px;
+	}
+
 }
 .page-header__menu-toggle {
 
@@ -65,12 +72,13 @@
 		&.page-header__menu-toggle_opened {
 			z-index: 210;
 			background: #fff;
+			position: fixed;
 
 		    &::before {
 				content: "";
 				position: absolute;
 				top: 25px;
-				left: 10px;
+				left: 20px;
 				width: 31px;
 				height: 1px;
 				background: rgba(20, 21, 23, 0.2);
@@ -82,7 +90,7 @@
 				content: "";
 				position: absolute;
 				top: 25px;
-				left: 10px;
+				left: 20px;
 				width: 31px;
 				height: 1px;
 				background: rgba(20, 21, 23, 0.2);
