@@ -15,9 +15,37 @@
 		background: #fff;
 		z-index: 200; 
 	}
+
+	&.menu-mob_no-js {
+
+		@media (max-width:$tablet-width) {
+			position: absolute;
+			height:150px;
+			width:auto;
+			top:50px;
+
+
+			.menu-mob__list {
+				margin:0;
+			}
+
+			&.menu-mob_closed {
+				display: flex;
+			}
+
+		}
+	}
 }
 
 .menu-mob__list {
+
+	a {
+		display: flex;
+		align-items:center;
+		width:100%;
+		height:100%;
+		margin:17px 0 17px 16px;
+	}
 
 	@media (max-width:$tablet-width) {
 		width:100%;
@@ -38,7 +66,6 @@
 		height:60px;
 		margin:0 0 30px 0;
 		box-sizing:border-box;
-		padding:17px 0 17px 16px;
 		background: #FBF8F8;
 
 		&:after {

@@ -17,3 +17,61 @@
 .cards_close {
 	display: none;
 }
+
+.cards__image_greece {
+	background-image: url("../img/greeceTabDesk.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	@media (min-resolution: 2dppx) {
+		background-image: url("../img/greeceTabDesk@2x.jpg");
+	}
+
+	@media (max-width:$tablet-width) {
+		background-image: url("../img/greeceTabPlan.jpg");
+
+		@media (min-resolution: 2dppx) {
+			background-image: url("../img/greeceTabPlan@2x.jpg");
+		}
+	}
+	@media (max-width:$mobile-width-only) {
+		background-image: url("../img/greeceTabMob.jpg");
+
+		@media (min-resolution: 2dppx) {
+			background-image: url("../img/greeceTabMob@2x.jpg");
+		}
+	}
+}
+
+.cards__image_albanium {
+	background-image: url("../img/albaniaTabDesk.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	@media (min-resolution: 2dppx) {
+		background-image: url("../img/albaniaTabDesk@2x.jpg");
+	}
+}
+
+.cards__image_maked {
+	background-image: url("../img/makedoniaTabDesk.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	@media (min-resolution: 2dppx) {
+		background-image: url("../img/makedoniaTabDesk@2x.jpg");
+	}
+}
+.cards__image_cherno {
+	background-image: url("../img/chernogoriaTabDesk.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	@media (min-resolution: 2dppx) {
+		background-image: url("../img/chernogoriaTabDesk@2x.jpg");
+	}
+}
+.cards__image_croatia {
+	background-image: url("../img/croatiaTabDesk.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	@media (min-resolution: 2dppx) {
+		background-image: url("../img/croatiaTabDesk@2x.jpg");
+	}
+}

@@ -66,19 +66,39 @@
 	}
 }
 .card_greece {
-	background-image: url("../img/greeceTabDesk.png");
+	background-image: url("../img/greeceTabDesk.jpg");
+
+	@media (min-resolution: 2dppx) {
+		background-image: url("../img/greeceTabDesk@2x.jpg");
+	}
 }
 .card_albanium {
-	background-image: url("../img/albaniaTabDesk.png");
+	background-image: url("../img/albaniaTabDesk.jpg");
+
+	@media (min-resolution: 2dppx) {
+		background-image: url("../img/albaniaTabDesk@2x.jpg");
+	}
 }
 .card_maked {
-	background-image: url("../img/makedoniaTabDesk.png");
+	background-image: url("../img/makedoniaTabDesk.jpg");
+
+	@media (min-resolution: 2dppx) {
+		background-image: url("../img/makedoniaTabDesk@2x.jpg");
+	}
 }
 .card_cherno {
-	background-image: url("../img/chernogoriaTabDesk.png");
+	background-image: url("../img/chernogoriaTabDesk.jpg");
+
+	@media (min-resolution: 2dppx) {
+		background-image: url("../img/chernogoriaTabDesk@2x.jpg");
+	}
 }
 .card_croatia {
-	background-image: url("../img/croatiaTabDesk.png");
+	background-image: url("../img/croatiaTabDesk.jpg");
+
+	@media (min-resolution: 2dppx) {
+		background-image: url("../img/croatiaTabDesk@2x.jpg");
+	}
 }
 .card__name {
 	width:215px;

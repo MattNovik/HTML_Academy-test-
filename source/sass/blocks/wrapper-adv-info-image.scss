@@ -1,15 +1,30 @@
 .wrapper-adv-info-image {
 	width:100%;
 	height:860px;
-	background-image: url("../img/mainImageDesk.png");
+	background-image: url("../img/mainImageDesk.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 
+	@media (min-resolution: 2dppx) {
+		background-image: url("../img/mainImageDesk@2x.jpg");
+	}
+
 	@media (max-width:$tablet-width) {
 		height:344px;
+		background-image: url("../img/mainImagePlan.jpg");
+
+		@media (min-resolution: 2dppx) {
+			background-image: url("../img/mainImagePlan@2x.jpg");
+		}
 	}
 
 	@media (max-width:$mobile-width-only) {
 		height:235px;
+
+		background-image: url("../img/mainImageMob.jpg");
+
+		@media (min-resolution: 2dppx) {
+			background-image: url("../img/mainImageMob@2x.jpg");
+		}
 	}
 }

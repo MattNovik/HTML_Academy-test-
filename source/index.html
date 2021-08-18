@@ -6,12 +6,12 @@
 		<link rel="stylesheet" href="css/style.min.css">	
 	</head>
 	<body class="page-body">
-		<header class="page-header">
+		<header class="page-header no-js">
 			<a href="#" class="page-header__logo">
 				<img src="img/logo.svg" alt="logo">
 			</a>
 			<span class="page-header__menu-toggle"></span>
-			<nav class="menu-mob menu-mob_closed">
+			<nav class="menu-mob menu-mob_closed menu-mob_no-js">
 				<ul class="menu-mob__list">
 					<li><a href="#places">О путешествии</a></li>
 					<li><a href="#prices">Цены</a></li>
@@ -36,13 +36,16 @@
 			<div class="wrapper-page-modal-hover wrapper-page-modal-hover_closed"></div>
 			<div class="wrapper-modal wrapper-modal_closed">
 				<div class="wrapper-modal__image">
-					<img src="img/popup.png" alt="popup" width="338" height="444">
+					<picture>
+				        <source media="(min-width: 768px)" srcset="img/popup.png 1x, img/popup@2x.png 2x">
+				        <img src="img/popup.png" alt="popup" width="338" height="444">
+			    	</picture>
 				</div>
 				<div class="wrapper-modal-form">
 					<span class="wrapper-modal-form__close"></span>
 					<p class="wrapper-modal-form__name">Купить тур</p>
 					<form method="post" class="wrapper-modal-form__form" enctype="multipart/form-data" autocomplete="off">
-						<input type="tel" id="tel" class="telephone" placeholder="Введите 10 цифр номера" required minlength="10" maxlength="10" >
+						<input type="tel" id="tel" class="telephone" placeholder="Введите 10 цифр номера" required minlength="10" maxlength="10">
 						<label for="tel"><span>*</span> +7</label>
 						<input type="email" class="email" placeholder="E-mail">
 						<button class="wrapper-modal-form__send" type="submit">отправить</button>
@@ -159,7 +162,10 @@
 			</div>
 			<div class="wrapper-additional">
 				<div class="wrapper-additional__image-wrapper">
-					<img src="img/additionalDesk.png" alt="sunset" width="844" height="455">
+					<picture>
+				        <source media="(min-width: 768px)" srcset="img/additionalPlan.png 1x, img/additionalPlan@2x.png 2x">
+				        <img src="img/additionalDesk.png" alt="sunset" width="844" height="455">
+				    </picture>
 				</div>
 				<div class="additional-info">
 					<p class="additional-info__name">У Вас остались вопросы?</p>
@@ -226,7 +232,7 @@
 					<button class="tab-info__button open-popup">купить тур сейчас</button>
 				</div>
 				<div class="tab tab-image">
-					<img src="" alt="photo_country" width="430" height="596">
+					<div class="tab-image__image"></div>
 					<div class="tab-review">
 						<h4 class="tab-review__name">Отзывы</h4>
 						<p class="tab-review__text">Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света! </p>
