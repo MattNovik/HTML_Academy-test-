@@ -80,18 +80,54 @@
 	outline: none;
 
 	&.error {
+		position: relative;
 		border:solid 1px #FE7865;
+
+		+label {
+			&:before {
+				content:"Данные не верны";
+				position: absolute;
+				top:-35px;
+				left:-25px;
+				width:200px;
+				color:#FE7865;
+			}
+		}
 	}
 	
 	&.email {
+		position: relative;
 		&:invalid {
 			border:solid 1px #FE7865;
+
+			+label {
+				position: absolute;
+				left:310px;
+				&:before {
+					content:"Данные не верны";
+					position: absolute;
+					top:-35px;
+					left:-25px;
+					width:200px;
+					color:#FE7865;
+				}
+			}
 		}
 	}
 
 
 	@media (max-width:$mobile-width-only) {
 		width:288px;
+
+		&.email {
+			&:invalid {
+
+				+label {
+					left:25px;
+					top:85px;
+				}
+			}
+		}
 	}
 }
 .additional-info__form input::placeholder {

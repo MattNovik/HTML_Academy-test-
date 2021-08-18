@@ -63,7 +63,7 @@ const COUNTRIES = {
 };
 
 const isEscEvent = (evt) => {
-  return evt.key === 'Escape' || evt.key === 'Esc';
+  return evt.key === "Escape" || evt.key === "Esc";
 };
 
 const onPopupEscKeydown = (evt) => {
@@ -95,7 +95,7 @@ const createTab = function(arr) {
 	tab.querySelector(".tab-review__author").textContent = arr.reviewAuthor;
 	tab.querySelector(".open-popup").addEventListener("click", () => {
 		if (popup.classList.contains("wrapper-modal_closed")) {
-			document.addEventListener('keydown', onPopupEscKeydown);
+			document.addEventListener("keydown", onPopupEscKeydown);
 			popup.classList.remove("wrapper-modal_closed");
 			pageHover.classList.remove("wrapper-page-modal-hover_closed");
 			popup.querySelector(".telephone").focus();
@@ -105,48 +105,48 @@ const createTab = function(arr) {
 	return tab;
 };
 
-menuMob.classList.remove('menu-mob_no-js');
+menuMob.classList.remove("menu-mob_no-js");
 header.classList.remove("no-js");
 
 formSendSucessClose.addEventListener("click", () => {
 	if (!formSendSuccess.classList.contains("wrapper-modal-success_closed")) {
 		formSendSuccess.classList.add("wrapper-modal-success_closed");
 		pageHover.classList.add("wrapper-page-modal-hover_closed");
-		document.removeEventListener('keydown', onPopupEscKeydown);
+		document.removeEventListener("keydown", onPopupEscKeydown);
 	}
 });
 
 additionalFromSend.addEventListener("submit", (evt) => {
 	evt.preventDefault();
-	console.log('hi');
+	console.log("hi");
 	formSendSuccess.classList.remove("wrapper-modal-success_closed");
 	pageHover.classList.remove("wrapper-page-modal-hover_closed");
-	document.addEventListener('keydown', onPopupEscKeydown);
-	localStorage.setItem('telephone', additionalFromSend.querySelector(".telephone").value);
-	localStorage.setItem('email', additionalFromSend.querySelector(".email").value);
+	document.addEventListener("keydown", onPopupEscKeydown);
+	localStorage.setItem("telephone", additionalFromSend.querySelector(".telephone").value);
+	localStorage.setItem("email", additionalFromSend.querySelector(".email").value);
 });
 
 popupFormSend.addEventListener("submit", (evt) => {
 	evt.preventDefault();
 	formSendSuccess.classList.remove("wrapper-modal-success_closed");
 	pageHover.classList.remove("wrapper-page-modal-hover_closed");
-	document.addEventListener('keydown', onPopupEscKeydown);
-	localStorage.setItem('telephone', popupFormSend.querySelector(".telephone").value);
-	localStorage.setItem('email', popupFormSend.querySelector(".email").value);
+	document.addEventListener("keydown", onPopupEscKeydown);
+	localStorage.setItem("telephone", popupFormSend.querySelector(".telephone").value);
+	localStorage.setItem("email", popupFormSend.querySelector(".email").value);
 });
 
 pageHover.addEventListener("click", () => {
 	popup.classList.add("wrapper-modal_closed");
 	pageHover.classList.add("wrapper-page-modal-hover_closed");
 	formSendSuccess.classList.add("wrapper-modal-success_closed");
-	document.removeEventListener('keydown', onPopupEscKeydown);
+	document.removeEventListener("keydown", onPopupEscKeydown);
 });
 
 closePopup.addEventListener("click", () => {
 	if (!popup.classList.contains("wrapper-modal_closed")) {
 		popup.classList.add("wrapper-modal_closed");
 		pageHover.classList.add("wrapper-page-modal-hover_closed");
-		document.removeEventListener('keydown', onPopupEscKeydown);
+		document.removeEventListener("keydown", onPopupEscKeydown);
 	}
 });
 
@@ -162,7 +162,7 @@ menuToggle.addEventListener("click", () => {
 
 menuMob.addEventListener("click", (evt) => {
 	console.log(evt.target.tagName);
-		if (evt.target.tagName === 'A') {
+		if (evt.target.tagName === "A") {
 			menuMob.classList.add("menu-mob_closed");
 			menuToggle.classList.remove("page-header__menu-toggle_opened");
 		}
@@ -223,7 +223,7 @@ for (let i = 0; i < openPopup.length; i++) {
 		if (popup.classList.contains("wrapper-modal_closed")) {
 			popup.classList.remove("wrapper-modal_closed");
 			pageHover.classList.remove("wrapper-page-modal-hover_closed");
-			document.addEventListener('keydown', onPopupEscKeydown);
+			document.addEventListener("keydown", onPopupEscKeydown);
 			popup.querySelector(".telephone").focus();
 		}
 	})
@@ -239,6 +239,6 @@ for (let i = 0; i < telephoneForm.length; i++) {
 	  } else {
 	  	telephoneForm[i].classList.remove("error");
 	  }
-	  telephoneForm[i].value = telephoneForm[i].value.replace(/[^0-9]/g, '');
+	  telephoneForm[i].value = telephoneForm[i].value.replace(/[^0-9]/g, "");
 	});
 }

@@ -40,12 +40,38 @@
 	outline: none;
 
 	&.error {
+		position: relative;
 		border:solid 1px #FE7865;
+
+		+label {
+			&:before {
+				content:"Данные не верны";
+				position: absolute;
+				top:-35px;
+				left:-25px;
+				width:200px;
+				color:#FE7865;
+			}
+		}
 	}
 	
 	&.email {
+		position: relative;
 		&:invalid {
 			border:solid 1px #FE7865;
+
+			+label {
+				position: absolute;
+				top:85px;
+				&:before {
+					content:"Данные не верны";
+					position: absolute;
+					top:-35px;
+					left:-25px;
+					width:200px;
+					color:#FE7865;
+				}
+			}
 		}
 	}
 
@@ -73,7 +99,6 @@
 		top:-10px;
 		left:-10px;
 		color:#FE7865;
-
 	}
 }
 .wrapper-modal-form__send {

@@ -65,7 +65,7 @@ exports.minImage = minImage;
 const copy = () => {
   return gulp.src([
       "source/fonts/*.{woff2,woff}",
-      "source/sass/manifest.webmanifest",
+      "source/manifest.webmanifest",
     ], {
       base: "source"
     })

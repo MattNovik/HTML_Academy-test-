@@ -18,10 +18,57 @@
 	display: none;
 }
 
+.cards_greece{
+
+	.tab-review__author {
+		&:before {
+			background-image:url("../img/greeceReviewPhoto.png");
+		}
+	}
+}
+
+.cards_albanium{
+
+	.tab-review__author {
+		&:before {
+			background-image:url("../img/albanReviewPhoto.png");
+		}
+	}
+}
+
+.cards_maked{
+
+	.tab-review__author {
+		&:before {
+			background-image:url("../img/makedReviewPhoto.png");
+		}
+	}
+}
+
+.cards_cherno{
+
+	.tab-review__author {
+		&:before {
+			background-image:url("../img/cherReviewPhoto.png");
+		}
+	}
+}
+
+.cards_croatia{
+
+	.tab-review__author {
+		&:before {
+			background-image:url("../img/croatiaReviewPhoto.png");
+		}
+	}
+}
+
+
 .cards__image_greece {
 	background-image: url("../img/greeceTabDesk.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+
 	@media (min-resolution: 2dppx) {
 		background-image: url("../img/greeceTabDesk@2x.jpg");
 	}
@@ -46,6 +93,7 @@
 	background-image: url("../img/albaniaTabDesk.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+
 	@media (min-resolution: 2dppx) {
 		background-image: url("../img/albaniaTabDesk@2x.jpg");
 	}

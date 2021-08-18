@@ -2,7 +2,12 @@
 <html class="page" lang="ru">
 	<head>
 		<meta charset="utf-8">
+		<title>Euro-Trip</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="favicon.ico">
+		<link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
+		<link rel="apple-touch-icon" href="img/favicon/180.png">
+		<link rel="manifest" href="manifest.webmanifest">		
 		<link rel="stylesheet" href="css/style.min.css">	
 	</head>
 	<body class="page-body">
@@ -47,7 +52,8 @@
 					<form method="post" class="wrapper-modal-form__form" enctype="multipart/form-data" autocomplete="off">
 						<input type="tel" id="tel" class="telephone" placeholder="Введите 10 цифр номера" required minlength="10" maxlength="10">
 						<label for="tel"><span>*</span> +7</label>
-						<input type="email" class="email" placeholder="E-mail">
+						<input type="email" class="email" placeholder="E-mail" id="email">
+						<label for="email"></label>
 						<button class="wrapper-modal-form__send" type="submit">отправить</button>
 					</form>					
 				</div>
@@ -171,9 +177,10 @@
 					<p class="additional-info__name">У Вас остались вопросы?</p>
 					<p class="additional-info__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
 					<form method="post" class="additional-info__form" enctype="multipart/form-data" autocomplete="off">
-						<input type="tel" id="tel" class="telephone" placeholder="Введите 10 цифр номера" required  minlength="10" maxlength="10">
-						<label for="tel"><span>*</span> +7</label>
-						<input type="email" class="email" placeholder="E-mail">
+						<input type="tel" id="tel2" class="telephone" placeholder="Введите 10 цифр номера" required  minlength="10" maxlength="10">
+						<label for="tel2"><span>*</span> +7</label>
+						<input type="email" class="email" placeholder="E-mai" id="email3">
+						<label for="email3"></label>
 						<button class="additional-info__send" type="submit">отправить</button>
 					</form>
 				</div>

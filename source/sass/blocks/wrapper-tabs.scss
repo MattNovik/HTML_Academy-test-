@@ -5,7 +5,8 @@
 
 	@media (max-width:$tablet-width) {
 		width:100%;
-		overflow:hidden;
+		overflow-y:hidden;
+		overflow-x:scroll;
 		padding:0 0 40px 0;
 	}
 
@@ -18,11 +19,15 @@
 		padding:0 0 0 22px;
 		margin: 0 auto 0 auto;
 		width:746px;
-		overflow: hidden;
+		overflow-x:scroll;
 	}
 
 	@media (max-width:$mobile-width-only) {
 		width:288px;
 
 	}
+}
+.wrapper-tabs__countries::-webkit-scrollbar {
+	width:0;
+	height:0;
 }
